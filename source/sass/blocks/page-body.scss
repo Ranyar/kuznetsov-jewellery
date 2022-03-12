@@ -1,0 +1,9 @@
+.page-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-body--no-scroll {
+  overflow-y: hidden;
+}
