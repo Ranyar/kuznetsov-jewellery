@@ -1,0 +1,65 @@
+.intro {
+  max-width: 1366px;
+  min-height: 463px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/main-background-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media(min-resolution: 2dppx) {
+      background-image: url("../../img/main-background-desktop@2x.jpg");
+    }
+  }
+
+  @media (max-width: $tablet-max-width) {
+    background-image: url("../../img/main-background-tablet.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media(min-resolution: 2dppx) {
+      background-image: url("../../img/main-background-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    background-image: url("../../img/main-background-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media(min-resolution: 2dppx) {
+      background-image: url("../../img/main-background-mobile@2x.jpg");
+    }
+  }
+}
+
+.intro__text {
+  color: $basic-white;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  padding-top: 181px;
+}
+
+.intro__text h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 57px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.intro__text p {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 39px;
+  margin: 0;
+  text-align: center;
+}

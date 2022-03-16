@@ -1,0 +1,33 @@
+.user-menu {
+  list-style: none;
+  display: flex;
+  padding: 12px 0 0 0;
+  margin: 0;
+  font-weight: 500;
+  line-height: 21px;
+
+  & li {
+    margin-right: 35px;
+  }
+
+  & li:last-child {
+    margin: 0;
+  }
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
+
+.user-menu--toggled {
+  display: block;
+  color: $basic-white;
+}
+
+.user-menu__item:last-child {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
