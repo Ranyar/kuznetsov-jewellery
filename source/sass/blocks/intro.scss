@@ -43,6 +43,10 @@
   color: $basic-white;
   font-family: 'Cormorant Garamond', 'Georgia', serif;
   padding-top: 181px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 189px;
+  }
 }
 
 .intro__text h2 {
@@ -53,6 +57,17 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin: 0;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 17px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 38px;
+    line-height: 48px;
+    letter-spacing: 0.03em;
+    padding: 0;
+  }
 }
 
 .intro__text p {
@@ -62,4 +77,14 @@
   line-height: 39px;
   margin: 0;
   text-align: center;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 19px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 34px;
+    line-height: 34px;
+    padding: 0;
+  }
 }

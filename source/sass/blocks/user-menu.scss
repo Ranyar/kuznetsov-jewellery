@@ -19,6 +19,10 @@
     font-size: 18px;
     line-height: 130%;
   }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 1px;
+  }
 }
 
 .user-menu--toggled {

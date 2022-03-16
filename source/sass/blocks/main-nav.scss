@@ -5,6 +5,10 @@
   @media (max-width: $tablet-max-width) {
     display: none;
   }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 1px;
+  }
 }
 
 .main-nav--toggled {
@@ -44,6 +48,10 @@
     padding: 0;
     margin-bottom: 40px;
   }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .main-nav__list--primary a {
@@ -79,6 +87,8 @@
 }
 
 .main-nav__list--secondary {
+  flex-direction: column;
+
   @media (min-width: $desktop-width) {
     display: none;
   }
@@ -88,7 +98,9 @@
     margin-bottom: 32px;
   }
 
-  flex-direction: column;
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .main-nav__list--secondary a {
