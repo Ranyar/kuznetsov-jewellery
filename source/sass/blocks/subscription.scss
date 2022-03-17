@@ -1,3 +1,108 @@
+.subscription {
+  @media (max-width: $tablet-max-width) {
+    max-width: 570px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    max-width: 290px;
+  }
+}
+
+.subscription p {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 0.02em;
+  line-height: 130%;
+  color: $basic-white;
+  margin: 0 0 10px 0;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 14px;
+    padding-right: 47px;
+  }
+}
+
+.subscription span {
+  display: block;
+  margin-bottom: 42px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: $basic-grey;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 41px;
+    padding-right: 44px;
+  }
+}
+
+.subscription__field {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.subscription__field button {
+  background-color: $basic-black;
+  border: none;
+  color: $basic-white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  min-width: 120px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-right: 0;
+  }
+}
+
+.subscription__field input {
+  background-color: $basic-black;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $basic-white;
+  width: 390px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 450px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 177px;
+  }
+}
+
+.subscription__field input::-webkit-input-placeholder {
+  color: $basic-grey;
+}
+
+.subscription__field input::-moz-placeholder {
+  color: $basic-grey;
+}
+
 .subscription__field svg {
   stroke: $basic-white;
+  margin-left: 10px;
+}
+
+.subscription__field::after {
+  position: absolute;
+  content: "";
+  width: 98%;
+  height: 1px;
+  background-color: $basic-white;
+  top: 30px;
+  left: 0;
+
+  @media (max-width: $tablet-max-width) {
+    width: 98.2%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
 }
