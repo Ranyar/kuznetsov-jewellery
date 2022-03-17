@@ -1,5 +1,6 @@
 .page-footer {
   background-color: $basic-black;
+  flex-shrink: 0;
 }
 
 .page-footer__wrapper {
