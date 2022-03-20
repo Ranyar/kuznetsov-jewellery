@@ -5,3 +5,19 @@
 .accordion__content--show {
   display: block;
 }
+
+.accordion--nojs .accordion__content {
+  display: block;
+}
+
+.accordion--nojs h3 {
+  &:after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 9px;
+    background-image: url("../../img/icon-arrow-down.svg");
+    bottom: 7px;
+    right: 6px;
+  }
+}

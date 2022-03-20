@@ -13,6 +13,7 @@
 // ----- Main
 @import "blocks/page-main.scss";
 @import "blocks/intro.scss";
+@import "blocks/novelties.scss";
 @import "blocks/faq.scss";
 @import "blocks/accordion.scss";
 
@@ -22,3 +23,6 @@
 @import "blocks/about.scss";
 @import "blocks/info.scss";
 @import "blocks/social.scss";
+
+// ----- Bundle
+@import "vendor/swiper-bundle.scss";
