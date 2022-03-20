@@ -85,24 +85,47 @@
         <p>made to be yours</p>
       </div>
     </section>
+    <section class="novelties">
+      <div class="novelties__wrapper">
+        <h2>New In</h2>
+        <a href="">Shop Now</a>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
     <section class="page-main__faq faq">
       <div class="faq__wrapper">
         <h2>Frequently asked questions</h2>
-        <ul class="faq__list accordion">
-          <li class="faq__item">
-            <h3>What materials are the jewellery made of?</h3>
-            <p class="accordion__content accordion__content--show">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+        <ul class="faq__list accordion accordion--nojs">
+          <li class="faq__item faq__item--opened accordion__item">
+            <h3>What materials are the&nbsp;jewellery made of?</h3>
+            <p class="accordion__content accordion__content--show">Our jewellerry is made of solid gold, silver or leather.&nbsp; Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item">
-            <h3>Which countries do you deliver to?</h3>
+          <li class="faq__item faq__item--closed accordion__item">
+            <h3>Which countries do&nbsp;you&nbsp;deliver to?</h3>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item">
-            <h3>What are the payment methods?</h3>
+          <li class="faq__item faq__item--closed accordion__item">
+            <h3>What are the payment&nbsp;methods?</h3>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
-          <li class="faq__item">
-            <h3>Can I return the jewellery if it didn’t fit me?</h3>
+          <li class="faq__item faq__item--closed accordion__item">
+            <h3>Can I return the jewellery&nbsp;if it didn’t fit&nbsp;me?</h3>
             <p class="accordion__content">Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
         </ul>
@@ -166,6 +189,8 @@
       </div>
     </div>
   </footer>
+  <script src="js/vendor/swiper-bundle.js"></script>
+  <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
