@@ -1,0 +1,55 @@
+.novelties__wrapper {
+  max-width: 1210px;
+  padding: 120px 20px 20px 20px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 70px 45px 20px 45px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 60px 15px 20px 15px;
+  }
+}
+
+.novelties__heading {
+  margin-bottom: 58px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.novelties__heading h2 {
+  margin: 0 0 25px 0;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.novelties__heading a {
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  position: relative;
+  border-bottom: 1px solid $basic-brown;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 3px;
+  }
+}

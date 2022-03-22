@@ -1,0 +1,27 @@
+.slider {
+  padding-bottom: 22px;
+  overflow: hidden;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 12px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 48px;
+  }
+}
+
+.slider__slide {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__slide:nth-child(3n) h3 {
+  @media (max-width: $tablet-max-width) {
+    padding-left: 16px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 0;
+  }
+}

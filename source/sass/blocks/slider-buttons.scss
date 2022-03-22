@@ -1,0 +1,65 @@
+.slider-buttons {
+  position: absolute;
+  top: 145px;
+  left: 0;
+  z-index: 1;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: $tablet-max-width) {
+    top: 95px;
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.slider-buttons__item {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-buttons__item svg {
+  width: 30px;
+  height: 10px;
+  stroke: $basic-brown;
+
+  @media (max-width: $tablet-max-width) {
+    width: 37px;
+    height: 17px;
+  }
+}
+
+.slider-buttons__item--prev {
+  justify-content: flex-start;
+}
+
+.slider-buttons__item--next {
+  justify-content: flex-end;
+}
+
+.slider-buttons__item:focus,
+.slider-buttons__item:hover {
+  outline: 2px solid $basic-brown;
+  outline-offset: 4px;
+}
+
+.slider-buttons__item:active {
+  opacity: 0.5;
+}
+
+.slider-buttons svg {
+  fill: $basic-brown;
+}

@@ -1,0 +1,39 @@
+.gallery-column-1 {
+  margin-right: 27px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 18px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 15px;
+  }
+}
+
+.gallery-column-1__item:nth-child(1) img {
+  width: 230px;
+  height: 230px;
+
+  object-fit: cover;
+
+  @media (max-width: $tablet-max-width) {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.gallery-column-1__item:nth-child(2) img {
+  width: 230px;
+  height: 150px;
+
+  object-fit: cover;
+
+  @media (max-width: $tablet-max-width) {
+    width: 130px;
+    height: 89px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    height: 87px;
+  }
+}

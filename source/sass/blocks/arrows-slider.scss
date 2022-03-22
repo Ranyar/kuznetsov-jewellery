@@ -1,0 +1,33 @@
+.arrows-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.arrows-slider__item {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.arrows-slider__item svg {
+  width: 37px;
+  height: 17px;
+
+  stroke: $basic-brown;
+}
+
+.arrows-slider__item--prev {
+  justify-content: flex-start;
+}
+
+.arrows-slider__item--next {
+  justify-content: flex-end;
+}
