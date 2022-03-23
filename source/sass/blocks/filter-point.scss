@@ -1,0 +1,86 @@
+.filter-point {
+  margin-top: 14px;
+  margin-bottom: 2px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: -4px;
+  }
+}
+
+.filter-point__input {
+  //
+}
+
+.filter-point__input input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+
+  opacity: 0;
+}
+
+.filter-point__input label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-left: 10px;
+
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic-dark;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 17px;
+
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+
+    border: 1px solid $basic-brown;
+
+    @media (max-width: $tablet-max-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.filter-point__input:hover label::before {
+  outline: 2px solid $basic-brown;
+  outline-offset: 4px;
+}
+
+.filter-point__input:active label::before {
+  opacity: 0.5;
+}
+
+.filter-point__input input[type="checkbox"]:checked + label::before {
+  background-color: $basic-brown;
+}
+
+.filter-point__input input[type="checkbox"]:focus + label::before {
+  outline: 2px solid $basic-brown;
+  outline-offset: 4px;
+}
+
+// убираем скругление для полей формы в iOs
+.filter-field input {
+  border: none;
+  border-radius: 0;
+}

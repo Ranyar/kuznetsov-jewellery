@@ -1,0 +1,71 @@
+.catalog-slider-navigation {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+
+.catalog-slider-navigation__btn {
+  padding: 5px 5px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $basic-dark;
+
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.catalog-slider-navigation__btn--prev {
+  //
+}
+
+.catalog-slider-navigation__btn--next {
+  //
+}
+
+.catalog-slider-navigation__pagination {
+  position: static;
+
+  @media (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
+
+.catalog-slider-navigation .swiper-pagination-bullet {
+  @media (max-width: $mobile-max-width) {
+    min-width: 32px;
+  }
+}
+
+.catalog-slider-navigation button:hover,
+.catalog-slider-navigation button:focus {
+  outline: 2px solid $basic-brown;
+  outline-offset: 2px;
+}
+
+.catalog-slider-navigation button:active {
+  opacity: 0.5;
+}

@@ -1,21 +1,22 @@
 .gallery-column-4 {
   align-items: flex-end;
   margin-right: 0;
-
-  @media (max-width: $mobile-max-width) {
-    display: none;
-  }
 }
 
 .gallery-column-4__item:nth-child(1) img {
   width: 230px;
   height: 230px;
-
   object-fit: cover;
 
+  @media (max-width: $tablet-max-width) {
+    width: 133px;
+    height: 133px;
+  }
+
   @media (max-width: $mobile-max-width) {
-    width: 126px;
-    height: 126px;
+    //width: 126px;
+    //height: 126px;
+    display: none;
   }
 }
 
@@ -26,7 +27,7 @@
   object-fit: cover;
 
   @media (max-width: $tablet-max-width) {
-    width: 134px;
-    height: 96px;
+    width: 133px;
+    height: 87px;
   }
 }

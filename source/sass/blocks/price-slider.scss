@@ -1,0 +1,137 @@
+.price-slider {
+  display: flex;
+  justify-content: space-between;
+  // margin-top: 2px;
+  padding-bottom: 35px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $basic-brown;
+
+  @media (max-width: $tablet-max-width) {
+    margin-top: 11px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 11px;
+
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-top: 9px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.price-slider label {
+  position: absolute;
+  top: 15px;
+
+  padding: 0;
+
+  font: inherit;
+}
+
+.price-slider input {
+  max-width: 30px;
+
+  font: inherit;
+}
+
+.price-slider label:hover,
+.price-slider label:focus {
+  outline: none;
+}
+
+.price-slider input:hover,
+.price-slider input:focus {
+  outline: 2px solid $basic-brown;
+  outline-offset: 0.8px;
+}
+
+
+.price-slider__line {
+  position: relative;
+
+  height: 1px;
+}
+
+.price-slider__line--low {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 26%;
+
+  background-color: $basic-brown;
+
+
+  @media (max-width: $tablet-max-width) {
+    width: 17%;
+  }
+}
+
+.price-slider__line--low label {
+  right: -25px;
+}
+
+.price-slider__line--middle {
+  width: 100%;
+
+  background-color: $basic-brown;
+}
+
+.price-slider__pin {
+  position: absolute;
+  top: -7px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $basic-brown;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (max-width: $tablet-max-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.price-slider__pin--low {
+  left: -8px;
+
+  @media (max-width: $tablet-max-width) {
+    left: -9px;
+  }
+}
+
+.price-slider__pin--top {
+  right: -8px;
+  z-index: 3;
+
+  @media (max-width: $tablet-max-width) {
+    right: -9px;
+  }
+}
+
+.price-slider__line--top {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 21%;
+
+  background-color: $basic-grey;
+
+  @media (max-width: $tablet-max-width) {
+    width: 24%;
+  }
+}
+
+.price-slider__line--top label {
+  left: -16px;
+
+  @media (max-width: $tablet-max-width) {
+    left: -19px;
+  }
+}

@@ -2,11 +2,11 @@
   margin-right: 27px;
 
   @media (max-width: $tablet-max-width) {
-    margin-right: 18px;
+    margin-right: 16px;
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-right: 15px;
+    margin-right: 24px;
   }
 }
 
@@ -17,8 +17,8 @@
   object-fit: cover;
 
   @media (max-width: $tablet-max-width) {
-    width: 130px;
-    height: 130px;
+    width: 133px;
+    height: 133px;
   }
 }
 
@@ -29,8 +29,8 @@
   object-fit: cover;
 
   @media (max-width: $tablet-max-width) {
-    width: 130px;
-    height: 89px;
+    width: 133px;
+    height: 86px;
   }
 
   @media (max-width: $mobile-max-width) {

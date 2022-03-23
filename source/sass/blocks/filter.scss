@@ -1,0 +1,158 @@
+.filter {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  width: 250px;
+
+  @media (max-width: $tablet-max-width) {
+    display: none;
+    width: 423px;
+    margin-left: 0;
+    padding-bottom: 38px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 270px;
+    padding-bottom: 28px;
+  }
+}
+
+.filter__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__field {
+  position: relative;
+}
+
+.filter__close {
+  display: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+
+  @media (max-width: $tablet-max-width) {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+
+    display: block;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    top: -17px;
+    right: -10px;
+  }
+}
+
+.filter__close svg {
+  width: 32px;
+  height: 32px;
+
+  cursor: pointer;
+
+  fill: $basic-grey;
+}
+
+.filter__btns {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0 20px;
+  }
+}
+
+.filter__btn {
+  padding: 24px 25px;
+}
+
+.filter__btn--submit {
+  margin-top: 34px;
+
+  background-color: $basic-brown;
+  border: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $basic-white;
+
+  @media (max-width: $tablet-max-width) {
+    margin-top: 38px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-top: 28px;
+  }
+}
+
+.filter__btn--submit:hover,
+.filter__btn--submit:focus {
+  outline: 2px solid $basic-grey;
+  outline-offset: -12;
+}
+
+.filter__btn--submit:active, {
+  opacity: 0.5;
+}
+
+.filter__btn--reset {
+  margin-top: 23px;
+
+  background-color: transparent;
+  border: 1px solid $basic-brown;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+
+
+  @media (max-width: $mobile-max-width) {
+    margin-top: 19px;
+  }
+}
+
+.filter__btn--reset:hover,
+.filter__btn--reset:focus {
+  outline: 2px solid $basic-brown;
+  outline-offset: -12;
+}
+
+.filter__btn--reset:active, {
+  opacity: 0.5;
+}
+
+.filter button {
+  cursor: pointer;
+}
+
+.filter--opened {
+  @media (max-width: $tablet-max-width) {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    z-index: 2;
+
+    display: block;
+
+    transform: translateX(-50%);
+    filter: drop-shadow(0 4px 4px rgba($basic-dark, 0.25));
+  }
+}
+
+.filter--page {
+  display: none;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    margin: 0 auto;
+
+    filter: drop-shadow(0 4px 4px rgba($basic-dark, 0.25));
+  }
+}

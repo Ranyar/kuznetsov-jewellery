@@ -11,6 +11,10 @@
   }
 }
 
+.slider-item--catalog {
+  margin-bottom: 6px;
+}
+
 .slider-item img {
   width: 270px;
   height: 284px;
@@ -20,6 +24,25 @@
   @media (max-width: $tablet-max-width) {
     width: 324px;
     height: 340px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 130px;
+    height: 136px;
+    margin-bottom: 12px;
+  }
+}
+
+.slider-item--catalog img {
+  width: 270px;
+  height: 272px;
+  margin-bottom: 17px;
+
+  object-fit: cover;
+
+  @media (max-width: $tablet-max-width) {
+    width: 206px;
+    height: 208px;
   }
 
   @media (max-width: $mobile-max-width) {

@@ -48,27 +48,27 @@ if (accordions) {
 
   for (let i = 0; i < accordions.length; i++) {
     accordions[i].classList.remove(`accordion--nojs`);
-    accordionItems[i].classList.add(`faq__item--opened`);
+    accordionItems[i].classList.add(`accordion__item--opened`);
   }
   for (let i = 0; i < accordionItems.length; i++) {
     accordionItems[i].addEventListener(`click`, () => {
       let shown = document.querySelector(`.accordion__content--show`);
-      let opened = document.querySelector(`.faq__item--opened`);
+      let opened = document.querySelector(`.accordion__item--opened`);
 
       if (shown === accordionItems[i]) {
         content[i].classList.remove(`accordion__content--show`);
-        accordionItems[i].classList.add(`faq__item--closed`);
-        accordionItems[i].classList.remove(`faq__item--opened`);
+        accordionItems[i].classList.add(`accordion__item--closed`);
+        accordionItems[i].classList.remove(`accordion__item--opened`);
       } else {
         content[i].classList.add(`accordion__content--show`);
-        accordionItems[i].classList.remove(`faq__item--closed`);
-        accordionItems[i].classList.add(`faq__item--opened`);
+        accordionItems[i].classList.remove(`accordion__item--closed`);
+        accordionItems[i].classList.add(`accordion__item--opened`);
       }
 
       if (shown) {
         shown.classList.remove(`accordion__content--show`);
-        opened.classList.add(`faq__item--closed`);
-        opened.classList.remove(`faq__item--opened`);
+        opened.classList.add(`accordion__item--closed`);
+        opened.classList.remove(`accordion__item--opened`);
       }
     });
   }
