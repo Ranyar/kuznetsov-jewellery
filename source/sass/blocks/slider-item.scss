@@ -13,6 +13,16 @@
 
 .slider-item--catalog {
   margin-bottom: 6px;
+  width: 30%;
+
+  @media (max-width: $tablet-max-width) {
+    width: 29%;
+    flex-grow: 1;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 11px;
+  }
 }
 
 .slider-item img {
@@ -34,8 +44,8 @@
 }
 
 .slider-item--catalog img {
-  width: 270px;
-  height: 272px;
+  width: 100%;
+  height: auto;
   margin-bottom: 17px;
 
   object-fit: cover;

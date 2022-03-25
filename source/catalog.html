@@ -31,7 +31,7 @@
       </label>
       <input type="search" id="search" placeholder="Type here to search">
     </form>
-    <a class="page-header__logo" href="">
+    <a class="page-header__logo" href="index.html">
       <svg width="66" height="66">
         <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
       </svg>
@@ -42,7 +42,9 @@
       </svg>
     </a>
     <ul class="page-header__user-menu user-menu">
-      <li class="user-menu__item">Login</li>
+      <li class="user-menu__item user-menu__item--login">
+        <a href="login.html">Login</a>
+      </li>
       <li class="user-menu__item">Cart&nbsp <span class="user-menu__value">0</span></li>
     </ul>
     <nav class="page-header__main-nav main-nav">
@@ -87,54 +89,35 @@
   </section>
   <section class="catalog">
     <h2 class="visually-hidden">Jewellery product showcase</h2>
-
-    <div>
-      <a class="catalog__filter-link" href="filter.html">Filter</a>
+    <div class="catalog__filter-button">
+      <button type="button">Filter</button>
     </div>
-
     <div class="catalog__wrapper">
-
-      <div class="filter">
-        <button class="filter__close" type="button" tabindex="1">
-          <svg width="32" height="32" role="img">
-            <use xlink:href="#close-round"></use>
-          </svg>
-        </button>
-        <form class="filter__form accordion" action="#" method="POST">
+      <div class="filter filter--nojs"><!--filter--nojs показывает фильтр, если JS отключен-->
+        <form class="filter__form accordion accordion--nojs" action="#" method="POST">
           <fieldset class="filter__field filter-field accordion__item accordion__item--filter accordion__item--opened">
             <button class="filter-field__toggle" type="button" tabindex="1">
-                  <span>
-                    Product
-                  </span>
-              <svg width="17" height="10" role="img">
-                <use xlink:href="#chevron_up"></use>
-              </svg>
+              <span>
+                Product
+              </span>
             </button>
             <div class="filter-field__point filter-point accordion__content accordion__content--show">
               <div class="filter-point__input">
                 <input type="checkbox" id="necklaces" name="necklaces" tabindex="2">
-
                 <label for="necklaces">Necklaces</label>
               </div>
-
               <div class="filter-point__input">
                 <input type="checkbox" id="chokers" name="chokers" tabindex="3">
-
                 <label for="chokers">Chokers</label>
               </div>
-
               <div class="filter-point__input">
                 <input type="checkbox" id="rings" name="rings" tabindex="4">
-
                 <label for="rings">Rings</label>
               </div>
-
               <div class="filter-point__input">
                 <input type="checkbox" id="earrings" name="earrings" tabindex="5">
-
                 <label for="earrings">Earrings</label>
               </div>
-
             </div>
           </fieldset>
           <fieldset class="filter__field filter-field accordion__item accordion__item--filter accordion__item--closed">
@@ -149,13 +132,10 @@
             <div class="filter-field__point filter-point accordion__content">
               <div class="filter-point__input">
                 <input type="checkbox" id="gold" name="gold" tabindex="7">
-
                 <label for="gold">Gold</label>
               </div>
-
               <div class="filter-point__input">
                 <input type="checkbox" id="silver" name="silver" tabindex="8">
-
                 <label for="silver">Silver</label>
               </div>
             </div>
@@ -176,13 +156,11 @@
               </div>
               <div class="filter-point__input">
                 <input type="checkbox" id="dreams" name="dreams" tabindex="11">
-
                 <label for="dreams">Dreams</label>
               </div>
-
             </div>
           </fieldset>
-          <fieldset class="filter__field filter-field accordion__item accordion__item--filter accordion__item--closed">
+          <fieldset class="filter__field filter-field accordion__item accordion__item--filter accordion__item--opened">
             <button class="filter-field__toggle" type="button" tabindex="12">
                   <span>
                     Price
@@ -191,19 +169,17 @@
                 <use xlink:href="#chevron_up"></use>
               </svg>
             </button>
-            <div class="filter-field__point filter-point accordion__content">
+            <div class="filter-field__point filter-point accordion__content accordion__content--show">
               <div class="price-slider">
                 <div class="price-slider__line price-slider__line--low">
                   <label for="low-price">$
                     <input type="text" name="low-price" id="low-price" value="55" tabindex="13">
                   </label>
                 </div>
-
                 <div class="price-slider__line price-slider__line--middle">
                   <span class="price-slider__pin price-slider__pin--low"></span>
                   <span class="price-slider__pin price-slider__pin--top"></span>
                 </div>
-
                 <div class="price-slider__line price-slider__line--top">
                   <label for="top-price">$
                     <input type="text" name="top-price" id="top-price" value="155" tabindex="14">
@@ -220,8 +196,7 @@
       </div>
       <div class="catalog__slider-container">
         <div class="catalog__slider">
-          <div class="wrapper">
-            <div class="catalog__slider-page slider-page">
+          <div class="catalog__slider-page slider-page">
               <a href="#" class="slider-item slider-item--catalog slider-page__item">
                 <picture>
                   <!-- 1х: 270px; 2x: 540px -->
@@ -229,7 +204,7 @@
                   <!-- 1х: 206px; 2x: 412px -->
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/double-pearl-earrings-tablet.webp 1x, img/double-pearl-earrings-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/double-pearl-earrings-mobile.webp 1x, img/double-pearl-earrings_mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/double-pearl-earrings-mobile.webp 1x, img/double-pearl-earrings-mobile@2x.webp 2x">
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/double-pearl-earrings-desktop.jpg" srcset="img/double-pearl-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
                 </picture>
@@ -296,9 +271,9 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" media="(min-width: 1024px)" srcset="img/boho-earrings-desktop.webp 1x, img/boho-earrings-desktop@2x.webp 2x">
                   <!-- 1х: 206px; 2x: 412px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/boho-earrings-tablet.webp 1x, img/boho-earrings_tab@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/boho-earrings-tablet.webp 1x, img/boho-earrings-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/boho-earrings-mobile.webp 1x, img/boho-earrings_mob@2x.webp 2x">
+                  <source type="image/webp" srcset="img/boho-earrings-mobile.webp 1x, img/boho-earrings-mobile@2x.webp 2x">
 
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/boho-earrings-desktop.jpg" srcset="img/double-pearl-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
@@ -314,9 +289,9 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" media="(min-width: 1024px)" srcset="img/bird-necklace-desktop.webp 1x, img/bird-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 206px; 2x: 412px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/bird-necklace-tablet.webp 1x, img/bird-necklace_tab@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/bird-necklace-tablet.webp 1x, img/bird-necklace-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/bird-necklace-mobile.webp 1x, img/bird-necklace_mob@2x.webp 2x">
+                  <source type="image/webp" srcset="img/bird-necklace-mobile.webp 1x, img/bird-necklace-mobile@2x.webp 2x">
 
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/bird-necklace-desktop.jpg" srcset="img/bird-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
@@ -332,9 +307,9 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" media="(min-width: 1024px)" srcset="img/black-leather-choker-necklace-desktop.webp 1x, img/black-leather-choker-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 206px; 2x: 412px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/black-leather-choker-necklace-tablet.webp 1x, img/black-leather-choker-necklace_tab@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/black-leather-choker-necklace-tablet.webp 1x, img/black-leather-choker-necklace-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/black-leather-choker-necklace-mobile.webp 1x, img/black-leather-choker-necklace_mob@2x.webp 2x">
+                  <source type="image/webp" srcset="img/black-leather-choker-necklace-mobile.webp 1x, img/black-leather-choker-necklace-mobile@2x.webp 2x">
 
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/black-leather-choker-necklace-desktop.jpg" srcset="img/black-leather-choker-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
@@ -350,9 +325,9 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 206px; 2x: 412px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/purple-gemstone-necklace-tablet.webp 1x, img/purple-gemstone-necklace_tab@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/purple-gemstone-necklace-tablet.webp 1x, img/purple-gemstone-necklace-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/purple-gemstone-necklace-mobile.webp 1x, img/purple-gemstone-necklace_mob@2x.webp 2x">
+                  <source type="image/webp" srcset="img/purple-gemstone-necklace-mobile.webp 1x, img/purple-gemstone-necklace-mobile@2x.webp 2x">
 
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/purple-gemstone-necklace-desktop.jpg" srcset="img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
@@ -368,9 +343,9 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" media="(min-width: 1024px)" srcset="img/elephant-earrings-desktop.webp 1x, img/elephant-earrings-desktop@2x.webp 2x">
                   <!-- 1х: 206px; 2x: 412px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/elephant-earrings-tablet.webp 1x, img/elephant-earrings_tab@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/elephant-earrings-tablet.webp 1x, img/elephant-earrings-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/elephant-earrings-mobile.webp 1x, img/elephant-earrings_mob@2x.webp 2x">
+                  <source type="image/webp" srcset="img/elephant-earrings-mobile.webp 1x, img/elephant-earrings-mobile@2x.webp 2x">
 
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/elephant-earrings-desktop.jpg" srcset="img/elephant-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
@@ -386,9 +361,9 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" media="(min-width: 1024px)" srcset="img/threader-necklace-closeup-desktop.webp 1x, img/threader-necklace-closeup-desktop@2x.webp 2x">
                   <!-- 1х: 206px; 2x: 412px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/threader-necklace-closeup-tablet.webp 1x, img/threader-necklace-closeup_tab@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/threader-necklace-closeup-tablet.webp 1x, img/threader-necklace-closeup-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/threader-necklace-closeup-mobile.webp 1x, img/threader-necklace-closeup_mob@2x.webp 2x">
+                  <source type="image/webp" srcset="img/threader-necklace-closeup-mobile.webp 1x, img/threader-necklace-closeup-mobile@2x.webp 2x">
 
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/threader-necklace-closeup-desktop.jpg" srcset="img/threader-necklace-closeup-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
@@ -404,9 +379,9 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" media="(min-width: 1024px)" srcset="img/origami-crane-necklace-desktop.webp 1x, img/origami-crane-necklace-desktop@2x.webp 2x">
                   <!-- 1х: 206px; 2x: 412px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/origami-crane-necklace-tablet.webp 1x, img/origami-crane-necklace_tab@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/origami-crane-necklace-tablet.webp 1x, img/origami-crane-necklace-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/origami-crane-necklace-mobile.webp 1x, img/origami-crane-necklace_mob@2x.webp 2x">
+                  <source type="image/webp" srcset="img/origami-crane-necklace-mobile.webp 1x, img/origami-crane-necklace-mobile@2x.webp 2x">
 
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/origami-crane-necklace-desktop.jpg" srcset="img/origami-crane-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
@@ -422,9 +397,9 @@
                   <!-- 1х: 270px; 2x: 540px -->
                   <source type="image/webp" media="(min-width: 1024px)" srcset="img/marble-earrings-desktop.webp 1x, img/marble-earrings-desktop@2x.webp 2x">
                   <!-- 1х: 206px; 2x: 412px -->
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/marble-earrings-tablet.webp 1x, img/marble-earrings_tab@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/marble-earrings-tablet.webp 1x, img/marble-earrings-tablet@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 260px -->
-                  <source type="image/webp" srcset="img/marble-earrings-mobile.webp 1x, img/marble-earrings_mob@2x.webp 2x">
+                  <source type="image/webp" srcset="img/marble-earrings-mobile.webp 1x, img/marble-earrings-mobile@2x.webp 2x">
 
                   <!-- 1х: 270px; 2x: 540px -->
                   <img src="img/marble-earrings-desktop.jpg" srcset="img/marble-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="Jewellery item">
@@ -436,21 +411,24 @@
                 </p>
               </a>
             </div>
-          </div>
         </div>
         <div class="catalog__slider-navigation catalog-slider-navigation">
           <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--prev" aria-label="Previous">
             Previous
           </button>
-
-          <div class="slider-pagination catalog-slider-navigation__pagination"></div>
-
+          <div class="slider-pagination catalog-slider-navigation__pagination">
+            <span class="">1</span>
+            <span class="">2</span>
+            <span class="">3</span>
+            <span class="">4</span>
+            <span class="">5</span>
+            <span class="">6</span>
+          </div>
           <button class="catalog-slider-navigation__btn catalog-slider-navigation__btn--next" aria-label="Next">
             Next
           </button>
         </div>
       </div>
-
     </div>
   </section>
 </main>
@@ -462,7 +440,7 @@
       <div class="subscription__field">
         <label class="visually-hidden" for="email">Email subscription form</label>
         <input type="email" id="email" placeholder="Your E-mail">
-        <button type="submit">Sign up
+        <button type="submit">Sign Up
           <svg width="30" height="10">
             <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
           </svg>
@@ -511,6 +489,143 @@
     </div>
   </div>
 </footer>
+<section class="modal modal--filter"><!-- Добавление класса modal--show показывает модалку -->
+  <div class="filter filter--modal modal__wrapper modal__wrapper--filter">
+    <button class="filter__close" type="button" tabindex="17">
+      <svg width="14" height="14" role="img">
+        <use xlink:href="img/sprite_auto.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <form class="filter__form accordion" action="#" method="POST">
+        <fieldset class="filter__field filter-field accordion__item accordion__item--modal accordion__item--filter accordion__item--opened">
+          <button class="filter-field__toggle" type="button" tabindex="1">
+            <span>
+              Product
+            </span>
+          </button>
+          <div class="filter-field__point filter-point accordion__content accordion__content--show">
+            <div class="filter-point__input">
+              <input type="checkbox" id="necklaces-modal" name="necklaces-modal" tabindex="2">
+              <label for="necklaces-modal">Necklaces</label>
+            </div>
+            <div class="filter-point__input">
+              <input type="checkbox" id="chokers-modal" name="chokers-modal" tabindex="3">
+              <label for="chokers-modal">Chokers</label>
+            </div>
+            <div class="filter-point__input">
+              <input type="checkbox" id="rings-modal" name="rings-modal" tabindex="4">
+              <label for="rings-modal">Rings</label>
+            </div>
+            <div class="filter-point__input">
+              <input type="checkbox" id="earrings-modal" name="earrings" tabindex="5">
+              <label for="earrings-modal">Earrings</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="filter__field filter-field accordion__item accordion__item--modal accordion__item--filter accordion__item--closed">
+          <button class="filter-field__toggle" type="button" tabindex="6">
+            <span>
+              Material
+            </span>
+          </button>
+          <div class="filter-field__point filter-point accordion__content">
+            <div class="filter-point__input">
+              <input type="checkbox" id="gold-modal" name="gold-modal" tabindex="7">
+              <label for="gold-modal">Gold</label>
+            </div>
+            <div class="filter-point__input">
+              <input type="checkbox" id="silver-modal" name="silver-modal" tabindex="8">
+              <label for="silver-modal">Silver</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="filter__field filter-field accordion__item accordion__item--modal accordion__item--filter accordion__item--closed">
+          <button class="filter-field__toggle" type="button" tabindex="9">
+            <span>
+              Collection
+            </span>
+          </button>
+          <div class="filter-field__point filter-point accordion__content">
+            <div class="filter-point__input">
+              <input type="checkbox" id="flamingo-modal" name="flamingo-modal" tabindex="10">
+              <label for="flamingo-modal">Pink flamingo</label>
+            </div>
+            <div class="filter-point__input">
+              <input type="checkbox" id="dreams-modal" name="dreams-modal" tabindex="11">
+              <label for="dreams-modal">Dreams</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="filter__field filter-field accordion__item accordion__item--modal accordion__item--filter accordion__item--opened">
+          <button class="filter-field__toggle" type="button" tabindex="12">
+            <span>
+              Price
+            </span>
+          </button>
+          <div class="filter-field__point filter-point accordion__content accordion__content--show">
+            <div class="price-slider">
+              <div class="price-slider__line price-slider__line--low">
+                <label for="low-price-modal">$
+                  <input type="text" name="low-price-modal" id="low-price-modal" value="55" tabindex="13">
+                </label>
+              </div>
+              <div class="price-slider__line price-slider__line--middle">
+                <span class="price-slider__pin price-slider__pin--low"></span>
+                <span class="price-slider__pin price-slider__pin--top"></span>
+              </div>
+              <div class="price-slider__line price-slider__line--top">
+                <label for="top-price-modal">$
+                  <input type="text" name="top-price-modal" id="top-price-modal" value="155" tabindex="14">
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="filter__btns">
+          <button class="filter__btn filter__btn--submit" type="submit" tabindex="15">Apply</button>
+          <button class="filter__btn filter__btn--reset" type="reset" tabindex="16">Clear All</button>
+        </div>
+      </form>
+  </div>
+</section>
+<div class="modal modal--login">
+  <div class="login login--modal">
+    <div class="login__wrapper">
+      <div class="login__img">
+      <picture>
+        <!-- 1х: 430px; 2x: 860px -->
+        <source type="image/webp" media="(min-width: 1024px)" srcset="img/login-background-desktop.webp 1x, img/login-background-desktop@2x.webp 2x">
+        <!-- 1х: 442px; 2x: 884px -->
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/login-background-tablet@1x.webp 1x, img/login-background-tablet@2x.webp 2x">
+        <!-- 1х: 270px; 2x: 540px -->
+        <source type="image/webp" srcset="img/login-background-mobile.webp 1x, img/login-background-mobile@2x.webp 2x">
+        <!-- 1х: 430px; 2x: 560px -->
+        <img src="img/login-background-desktop.jpg" srcset="img/login-background-desktop@2x.jpg 2x" width="430" height="138" alt="New jewellery collection.">
+      </picture>
+    </div>
+      <div class="login__form-wrapper">
+      <h2>Log In</h2>
+      <form class="login__form" action="#" method="post">
+        <label for="useremail">
+          <input type="email" id="useremail" name="useremail" placeholder="Your E-mail" aria-label="Input your e-mail" required>
+        </label>
+        <label for="userpassword">
+          <input type="password" id="userpassword" name="userpassword" placeholder="Password" aria-label="Input your password" required>
+        </label>
+        <a href="#" class="login__restore-link">Forgot your password?</a>
+        <button class="login__btn" type="submit">Log In</button>
+      </form>
+      <a class="login__signup-link" href="#"> Don’t have an account?<span>&nbsp;&nbsp;Sign up</span>
+      </a>
+    </div>
+      <button class="login__close" type="button">
+        <svg width="14" height="14" role="img">
+          <use xlink:href="img/sprite_auto.svg#icon-cross"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
 <script src="js/vendor/swiper-bundle.js"></script>
 <script src="js/swiper.js"></script>
 <script src="js/main.js"></script>

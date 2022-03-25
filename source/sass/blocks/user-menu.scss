@@ -25,8 +25,13 @@
   }
 }
 
-.user-menu--toggled {
+.user-menu--toggled,
+.user-menu--nojs {
   display: block;
+}
+
+.user-menu a,
+.user-menu--nojs a {
   color: $basic-white;
 }
 

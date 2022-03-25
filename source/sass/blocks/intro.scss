@@ -11,7 +11,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @media(min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../../img/main-background-desktop@2x.jpg");
     }
   }
@@ -22,7 +22,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @media(min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../../img/main-background-tablet@2x.jpg");
     }
   }
@@ -33,7 +33,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @media(min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../../img/main-background-mobile@2x.jpg");
     }
   }
@@ -46,7 +46,7 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  @media(min-resolution: 2dppx) {
+  @media (min-resolution: 2dppx) {
     background-image: url("../../img/catalog-background-desktop@2x.jpg");
   }
 
@@ -56,7 +56,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @media(min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../../img/catalog-background-tablet@2x.jpg");
     }
   }
@@ -67,7 +67,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @media(min-resolution: 2dppx) {
+    @media (min-resolution: 2dppx) {
       background-image: url("../../img/catalog-background-mobile@2x.jpg");
     }
   }
@@ -75,7 +75,7 @@
 
 .intro__text {
   color: $basic-white;
-  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-family: "Cormorant Garamond", "Georgia", serif;
   padding-top: 181px;
 
   @media (max-width: $mobile-max-width) {
@@ -85,6 +85,10 @@
 
 .intro__text--catalog {
   padding-top: 92px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 79px;
+  }
 }
 
 .intro__text h2 {
@@ -114,7 +118,8 @@
   font-size: 34px;
   line-height: 130%;
   letter-spacing: unset;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  padding-right: 0;
 }
 
 .intro__text p {
@@ -141,4 +146,14 @@
   font-size: 22px;
   line-height: 130%;
   padding-left: 3px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 3px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 22px;
+    line-height: 26px;
+    padding: 0 11px;
+  }
 }

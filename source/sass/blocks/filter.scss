@@ -2,18 +2,39 @@
   display: flex;
   flex-shrink: 1;
   flex-direction: column;
-  width: 250px;
+  width: 21.2%;
+  position: relative;
 
   @media (max-width: $tablet-max-width) {
     display: none;
     width: 423px;
     margin-left: 0;
     padding-bottom: 38px;
+
+    &--nojs {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      padding: 0 45px 38px 45px;
+    }
   }
 
   @media (max-width: $mobile-max-width) {
     width: 270px;
     padding-bottom: 28px;
+
+    &--nojs {
+      width: 100%;
+      padding: 0 15px 38px;
+    }
+  }
+}
+
+.filter--nojs .filter__form,
+.filter--modal .filter__form {
+  @media (max-width: $tablet-max-width) {
+    box-shadow: 0 5px 32px rgba($filter-shadow, 0.24);
+    padding-bottom: 40px;
   }
 }
 
@@ -31,8 +52,7 @@
   width: 32px;
   height: 32px;
   padding: 0;
-
-  background-color: transparent;
+  background-color: $basic-dark;
   border: none;
   border-radius: 50%;
 
@@ -51,12 +71,10 @@
 }
 
 .filter__close svg {
-  width: 32px;
-  height: 32px;
-
+  width: 14px;
+  height: 14px;
   cursor: pointer;
-
-  fill: $basic-grey;
+  fill: $basic-white;
 }
 
 .filter__btns {

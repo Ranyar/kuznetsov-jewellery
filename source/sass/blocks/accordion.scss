@@ -11,7 +11,7 @@
 }
 
 .accordion--nojs h3 {
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     width: 16px;
@@ -27,6 +27,10 @@
 
   @media (max-width: $mobile-max-width) {
     padding-bottom: 13px;
+
+    &:last-child {
+      padding-bottom: 9px;
+    }
   }
 }
 
@@ -50,7 +54,7 @@
   }
 }
 
-.accordion__item--opened:before {
+.accordion__item--opened::before {
   position: absolute;
   content: "";
   width: 16px;
@@ -77,7 +81,7 @@
   }
 }
 
-.accordion__item--filter.accordion__item--opened:before {
+.accordion__item--filter.accordion__item--opened::before {
   top: 29px;
   right: 24px;
 
@@ -96,8 +100,18 @@
   }
 }
 
+.accordion__item--modal.accordion__item--opened::before {
+  top: 40px;
+  right: 40px;
+
+  @media (max-width: $mobile-max-width) {
+    top: 30px;
+    right: 20px;
+  }
+}
+
 .accordion__item--closed {
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     width: 16px;
@@ -125,7 +139,7 @@
 }
 
 .accordion__item--filter.accordion__item--closed {
-  &:before {
+  &::before {
     top: 29px;
     right: 24px;
 
@@ -143,4 +157,19 @@
       right: 23px;
     }
   }
+}
+
+.accordion__item--modal.accordion__item--closed::before {
+  top: 40px;
+  right: 40px;
+
+  @media (max-width: $mobile-max-width) {
+    top: 30px;
+    right: 20px;
+  }
+}
+
+.accordion--nojs .accordion__item--opened::before,
+.accordion--nojs .accordion__item--closed::before {
+  display: none;
 }

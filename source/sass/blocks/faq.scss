@@ -2,7 +2,6 @@
   max-width: 1060px;
   padding: 45px;
   margin: 0 auto;
-
   padding-top: 29px;
 
   @media (max-width: $tablet-max-width) {
@@ -10,12 +9,12 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 10px 15px 45px 15px;
+    padding: 10px 15px 14px 15px;
   }
 }
 
 .faq__wrapper h2 {
-  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-family: "Cormorant Garamond", "Georgia", serif;
   font-weight: 700;
   font-size: 34px;
   line-height: 130%;
@@ -44,7 +43,7 @@
     padding: 16px 18px 20px 18px;
   }
 
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -58,14 +57,8 @@
     }
   }
 
-  &:last-child:after {
+  &:last-child::after {
     display: none;
-  }
-
-  &:last-child {
-    @media (max-width: $mobile-max-width) {
-      padding-bottom: 9px;
-    }
   }
 
   &:hover,

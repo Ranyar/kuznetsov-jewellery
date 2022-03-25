@@ -11,7 +11,8 @@
   }
 }
 
-.main-nav--toggled {
+.main-nav--toggled,
+.main-nav--nojs {
   display: block;
 }
 
@@ -66,7 +67,8 @@
   }
 }
 
-.main-nav__list--toggled a {
+.main-nav__list--toggled a,
+.main-nav__list--nojs a {
   color: $basic-white;
 }
 

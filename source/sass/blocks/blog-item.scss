@@ -49,7 +49,7 @@
 
 .blog-item__text-wrapper h3 {
   margin: 0 0 37px 0;
-  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-family: "Cormorant Garamond", "Georgia", serif;
   font-size: 26px;
   line-height: 34px;
   font-weight: 600;
@@ -130,29 +130,19 @@
   position: absolute;
   right: 0;
   bottom: 3px;
-
   width: 285px;
   height: 300px;
 
   @media (max-width: $tablet-max-width) {
     position: static;
-
     width: 339px;
     max-height: 300px;
+    padding-top: 84px;
   }
 
   @media (max-width: $mobile-max-width) {
     width: 290px;
     height: 256px;
-  }
-}
-
-.blog-item--large .blog-item__text-wrapper {
-  @media (max-width: $tablet-max-width) {
-    padding-top: 84px;
-  }
-
-  @media (max-width: $mobile-max-width) {
     padding-top: 62px;
   }
 }

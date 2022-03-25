@@ -17,13 +17,13 @@
 </head>
 <body class="page-body">
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <button class="page-header__menu-toggle">
+    <div class="page-header__wrapper page-header__wrapper--nojs">
+      <button class="page-header__menu-toggle page-header__menu-toggle--nojs">
         <svg width="25" height="16">
           <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
         </svg>
       </button>
-      <form class="page-header__search" action="">
+      <form class="page-header__search page-header__search--nojs" action="">
         <label for="search">
           <svg width="14" height="14">
             <use xlink:href="img/sprite_auto.svg#icon-search"></use>
@@ -31,22 +31,24 @@
         </label>
         <input type="search" id="search" placeholder="Type here to search">
       </form>
-      <a class="page-header__logo" href="">
+      <a class="page-header__logo page-header__logo--nojs" href="">
         <svg width="66" height="66">
           <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
         </svg>
       </a>
-      <a class="page-header__cart" href="">
+      <a class="page-header__cart page-header__cart--nojs" href="">
         <svg width="18" height="16">
           <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
         </svg>
       </a>
-      <ul class="page-header__user-menu user-menu">
-        <li class="user-menu__item">Login</li>
+      <ul class="page-header__user-menu user-menu user-menu--nojs">
+        <li class="user-menu__item user-menu__item--login">
+          <a href="login.html">Login</a>
+        </li>
         <li class="user-menu__item">Cart&nbsp <span class="user-menu__value">0</span></li>
       </ul>
-      <nav class="page-header__main-nav main-nav">
-        <ul class="main-nav__list main-nav__list--primary">
+      <nav class="page-header__main-nav main-nav main-nav--nojs">
+        <ul class="main-nav__list main-nav__list--primary main-nav__list--nojs">
           <li class="main-nav__item">
             <a href="">What's new</a>
           </li>

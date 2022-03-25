@@ -5,12 +5,20 @@
 const pageBody = document.querySelector(`.page-body`);
 const pageHeaderWrapper = document.querySelector(`.page-header__wrapper`);
 const mainNav = document.querySelector(`.main-nav`);
-const mainNavListPrimary = document.querySelector(`.main-nav__list--primary`);
 const toggleButton = document.querySelector(`.page-header__menu-toggle`);
 const cartIcon = document.querySelector(`.page-header__cart`);
 const logoIcon = document.querySelector(`.page-header__logo`);
 const userMenu = document.querySelector(`.user-menu`);
 const search = document.querySelector(`.page-header__search`);
+
+pageHeaderWrapper.classList.remove(`page-header__wrapper--nojs`);
+mainNav.classList.remove(`main-nav--nojs`);
+mainNav.classList.remove(`main-nav__list--nojs`);
+toggleButton.classList.remove(`page-header__menu-toggle--nojs`);
+cartIcon.classList.remove(`page-header__cart--nojs`);
+logoIcon.classList.remove(`page-header__logo--nojs`);
+userMenu.classList.remove(`user-menu--nojs`);
+search.classList.remove(`page-header__search--nojs`);
 
 toggleButton.addEventListener(`click`, function () {
   if (pageHeaderWrapper.classList.contains(`page-header__wrapper--toggled`)) {
@@ -72,4 +80,103 @@ if (accordions) {
       }
     });
   }
+}
+
+// ----- Модальные окна
+const filter = document.querySelector(`.filter`);
+const login = document.querySelector(`.login`);
+const openFilterButton = document.querySelector(`.catalog__filter-button button`);
+const openLoginButton = document.querySelector(`.user-menu__item--login`);
+const filterCloseButton = document.querySelector(`.filter__close`);
+const loginCloseButton = document.querySelector(`.login__close`);
+const modals = document.querySelectorAll(`.modal`);
+
+if (filter) {
+  filter.classList.remove(`filter--nojs`);
+}
+
+if (modals) {
+  const modalFilter = document.querySelector(`.modal--filter`);
+  const nameFilter = modalFilter.querySelector(`input[name="necklaces-modal"]`);
+  const modalLogin = document.querySelector(`.modal--login`);
+  const nameLogin = modalLogin.querySelector(`input[name="useremail"]`);
+
+  openFilterButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    modalFilter.classList.add(`modal--show`);
+    pageBody.classList.add(`page-body--no-scroll`);
+    nameFilter.focus();
+  });
+
+  openLoginButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    modalLogin.classList.add(`modal--show`);
+    pageBody.classList.add(`page-body--no-scroll`);
+    nameLogin.focus();
+  });
+
+  for (let i = 0; i < modals.length; i++) {
+    window.addEventListener(`keydown`, (evt) => {
+      if (evt.key === `Escape` || evt.key === `Esc`) {
+        if (modals[i].classList.contains(`modal--show`)) {
+          modals[i].classList.remove(`modal--show`);
+        } pageBody.classList.remove(`page-body--no-scroll`);
+      }
+    });
+
+    modals[i].addEventListener(`click`, (evt) => {
+      if (evt.target.classList.contains(`modal--show`) || evt.target.classList.contains(`modal__wrapper`)) {
+        modals[i].classList.remove(`modal--show`);
+        pageBody.classList.remove(`page-body--no-scroll`);
+      }
+    });
+
+    if (filterCloseButton) {
+      filterCloseButton.addEventListener(`click`, () => {
+        modals[i].classList.remove(`modal--show`);
+        pageBody.classList.remove(`page-body--no-scroll`);
+      });
+    }
+    if (loginCloseButton) {
+      loginCloseButton.addEventListener(`click`, () => {
+        modals[i].classList.remove(`modal--show`);
+        pageBody.classList.remove(`page-body--no-scroll`);
+      });
+    }
+  }
+}
+
+// ----- Перехват фокуса в модальном окне фильтра
+
+const firstElementFilter = document.querySelector(`#necklaces-modal`);
+const lastElementFilter = document.querySelector(`.filter__close`);
+
+lastElementFilter.addEventListener(`keydown`, function (event) {
+  event.preventDefault();
+  if (event.keyCode === 9) {
+    firstElementFilter.focus();
+  }
+});
+
+// ----- Перехват фокуса в модальном окне логина
+
+const firstElementLogin = document.querySelector(`#useremail`);
+const lastElementLogin = document.querySelector(`.login__close`);
+
+lastElementLogin.addEventListener(`keydown`, function (event) {
+  event.preventDefault();
+  if (event.keyCode === 9) {
+    firstElementLogin.focus();
+  }
+});
+
+// ----- local storage для модального окна
+
+const loginInputEmail = document.getElementById(`useremail`);
+
+if (login) {
+  loginInputEmail.value = localStorage.getItem(`modal-name`);
+  loginInputEmail.addEventListener(`input`, () => {
+    localStorage.setItem(`modal-name`, loginInputEmail.value);
+  });
 }
