@@ -48,8 +48,18 @@
   line-height: 130%;
   position: relative;
   border-bottom: 1px solid $basic-brown;
+  color: $basic-dark;
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 3px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $basic-brown;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }

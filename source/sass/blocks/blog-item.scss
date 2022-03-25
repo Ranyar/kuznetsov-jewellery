@@ -149,8 +149,7 @@
 
 .blog-item a[href]:hover,
 .blog-item a[href]:focus, {
-  outline: 2px solid $basic-brown;
-  outline-offset: 4px;
+  color: $basic-brown;
 }
 
 

@@ -30,7 +30,19 @@
   display: block;
 }
 
-.user-menu a,
+.user-menu a {
+  color: $basic-dark;
+
+  &:hover,
+  &:focus {
+    color: $basic-brown;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
 .user-menu--nojs a {
   color: $basic-white;
 }

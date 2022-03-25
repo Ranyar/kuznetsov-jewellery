@@ -55,20 +55,20 @@
   display: inline-block;
   margin: 0 0 20px 0;
   padding-bottom: 4px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
-
   vertical-align: top;
   border-bottom: 1px solid $basic-brown;
+  color: $basic-dark;
 
-  @media (max-width: $tablet-max-width) {
-    //
+  &:hover,
+  &:focus {
+    color: $basic-brown;
   }
 
-  @media (max-width: $mobile-max-width) {
-    //
+  &:active {
+    opacity: 0.5;
   }
 }
 

@@ -68,6 +68,17 @@
   }
 }
 
+.page-header__logo svg {
+  &:hover,
+  &:focus {
+    fill: $basic-dark;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
 .page-header__logo--toggled svg,
 .page-header__logo--nojs svg {
   fill: $basic-white;
@@ -179,6 +190,16 @@
   margin-right: 14px;
   margin-top: 1px;
   fill: $basic-dark;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: $basic-brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 
   @media (max-width: $tablet-max-width) {
     width: 16px;

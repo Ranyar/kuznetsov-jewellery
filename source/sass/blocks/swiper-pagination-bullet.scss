@@ -15,16 +15,18 @@
   @media (max-width: $tablet-max-width) {
     min-width: 15px;
   }
+
+  &:hover,
+  &:focus {
+    color: $basic-brown;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .swiper-pagination-bullet-active {
   color: $basic-dark;
-
   border-radius: 0;
-}
-
-.swiper-pagination-bullet:hover,
-.swiper-pagination-bullet:focus {
-  outline: 1px solid $basic-grey;
-  outline-offset: -2px;
 }
