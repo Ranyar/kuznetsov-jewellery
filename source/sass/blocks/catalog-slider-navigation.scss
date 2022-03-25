@@ -60,8 +60,7 @@
 
 .catalog-slider-navigation button:hover,
 .catalog-slider-navigation button:focus {
-  outline: 2px solid $basic-brown;
-  outline-offset: 2px;
+  color: $basic-brown;
 }
 
 .catalog-slider-navigation button:active {
@@ -78,7 +77,7 @@
 
   &:hover,
   &:focus {
-    color: rgba($basic-dark, 0.3);
+    color: $basic-brown;
   }
 
   &:active {
@@ -96,6 +95,15 @@
 
 .catalog-slider-navigation span:first-child {
   color: $basic-dark;
+
+  &:hover,
+  &:focus {
+    color: $basic-brown;
+  }
+
+  &:active {
+    color: rgba($basic-dark, 0.6);
+  }
 }
 
 .catalog-slider-navigation span:last-child {
