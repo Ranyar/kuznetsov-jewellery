@@ -124,6 +124,7 @@
 const pageBody = document.querySelector(`.page-body`);
 const pageHeaderWrapper = document.querySelector(`.page-header__wrapper`);
 const mainNav = document.querySelector(`.main-nav`);
+const mainNavList = document.querySelector(`.main-nav__list`);
 const toggleButton = document.querySelector(`.page-header__menu-toggle`);
 const cartIcon = document.querySelector(`.page-header__cart`);
 const logoIcon = document.querySelector(`.page-header__logo`);
@@ -132,7 +133,7 @@ const search = document.querySelector(`.page-header__search`);
 
 pageHeaderWrapper.classList.remove(`page-header__wrapper--nojs`);
 mainNav.classList.remove(`main-nav--nojs`);
-mainNav.classList.remove(`main-nav__list--nojs`);
+mainNavList.classList.remove(`main-nav__list--nojs`);
 toggleButton.classList.remove(`page-header__menu-toggle--nojs`);
 cartIcon.classList.remove(`page-header__cart--nojs`);
 logoIcon.classList.remove(`page-header__logo--nojs`);
