@@ -23,7 +23,7 @@
         <use xlink:href="img/sprite_auto.svg#icon-menu"></use>
       </svg>
     </button>
-    <form class="page-header__search page-header__search--nojs" action="">
+    <form class="page-header__search page-header__search--nojs" action="https://echo.htmlacademy.ru" method="post">
       <label for="search">
         <svg width="14" height="14">
           <use xlink:href="img/sprite_auto.svg#icon-search"></use>
@@ -45,7 +45,7 @@
       <li class="user-menu__item user-menu__item--login">
         <a href="login.html">Login</a>
       </li>
-      <li class="user-menu__item"><a href="">Cart&nbsp <span class="user-menu__value">0</span></a></li>
+      <li class="user-menu__item"><a href="">Cart&nbsp; <span class="user-menu__value">0</span></a></li>
     </ul>
     <nav class="page-header__main-nav main-nav main-nav--nojs">
       <ul class="main-nav__list main-nav__list--primary main-nav__list--nojs">
@@ -93,7 +93,7 @@
       <button type="button">Filter</button>
     </div>
     <div class="catalog__wrapper">
-      <div class="filter filter--nojs"><!--filter--nojs показывает фильтр, если JS отключен-->
+      <div class="filter filter--nojs">
         <form class="filter__form accordion accordion--nojs" action="#" method="POST">
           <fieldset class="filter__field filter-field accordion__item accordion__item--filter accordion__item--opened">
             <button class="filter-field__toggle" type="button" tabindex="1">
@@ -434,7 +434,7 @@
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
-    <form class="page-footer__subscription subscription" action="">
+    <form class="page-footer__subscription subscription" action="https://echo.htmlacademy.ru" method="post">
       <p>The good stuff in your inbox</p>
       <span>News and updates from CH. No spam, we promise.</span>
       <div class="subscription__field">
@@ -489,7 +489,8 @@
     </div>
   </div>
 </footer>
-<section class="modal modal--filter"><!-- Добавление класса modal--show показывает модалку -->
+<section class="modal modal--filter">
+  <h2 class="visually-hidden">Filter</h2>
   <div class="filter filter--modal modal__wrapper modal__wrapper--filter">
     <button class="filter__close" type="button" tabindex="17">
       <svg width="14" height="14" role="img">
@@ -605,7 +606,7 @@
     </div>
       <div class="login__form-wrapper">
       <h2>Log In</h2>
-      <form class="login__form" action="#" method="post">
+      <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
         <label for="useremail">
           <input type="email" id="useremail" name="useremail" placeholder="Your E-mail" aria-label="Input your e-mail" required>
         </label>
