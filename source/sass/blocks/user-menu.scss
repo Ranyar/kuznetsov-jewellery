@@ -43,7 +43,8 @@
   }
 }
 
-.user-menu--nojs a {
+.user-menu--nojs a,
+.user-menu--toggled a {
   color: $basic-white;
 }
 
