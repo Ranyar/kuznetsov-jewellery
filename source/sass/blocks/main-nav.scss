@@ -69,7 +69,9 @@
 
 .main-nav__list--toggled a,
 .main-nav__list--nojs a {
-  color: $basic-white;
+  @media (max-width: $tablet-max-width) {
+    color: $basic-white;
+  }
 }
 
 .main-nav__list--primary .main-nav__item {

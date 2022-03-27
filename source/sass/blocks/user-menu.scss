@@ -27,7 +27,9 @@
 
 .user-menu--toggled,
 .user-menu--nojs {
-  display: block;
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
 }
 
 .user-menu a {
@@ -45,7 +47,9 @@
 
 .user-menu--nojs a,
 .user-menu--toggled a {
-  color: $basic-white;
+  @media (max-width: $tablet-max-width) {
+    color: $basic-white;
+  }
 }
 
 .user-menu__item:last-child {

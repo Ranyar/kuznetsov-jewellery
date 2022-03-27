@@ -19,17 +19,23 @@
 
 .page-header__wrapper--toggled,
 .page-header__wrapper--nojs {
-  background-color: $basic-brown;
+  @media (max-width: $tablet-max-width) {
+    background-color: $basic-brown;
+  }
 }
 
 .page-header__wrapper--toggled {
-  margin: unset;
+  @media (max-width: $tablet-max-width) {
+    margin: unset;
+  }
 }
 
 .page-header__wrapper--lock {
-  height: 100vh;
-  width: 100vw;
-  overflow-y: scroll;
+  @media (max-width: $tablet-max-width) {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+  }
 }
 
 .page-header__main-nav {
@@ -81,7 +87,9 @@
 
 .page-header__logo--toggled svg,
 .page-header__logo--nojs svg {
-  fill: $basic-white;
+  @media (max-width: $tablet-max-width) {
+    fill: $basic-white;
+  }
 }
 
 .page-header__logo--login {
@@ -134,15 +142,17 @@
 
 .page-header__cart--toggled svg,
 .page-header__cart--nojs svg {
-  stroke: $basic-white;
+  @media (max-width: $tablet-max-width) {
+    stroke: $basic-white;
 
-  &:hover {
-    stroke: $basic-dark;
-  }
+    &:hover {
+      stroke: $basic-dark;
+    }
 
-  &:active,
-  &:focus {
-    opacity: 0.7;
+    &:active,
+    &:focus {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -174,7 +184,9 @@
 
 .page-header__search--toggled,
 .page-header__search--nojs {
-  display: flex;
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+  }
 }
 
 .page-header__search input {
@@ -252,14 +264,16 @@
 
 .page-header__menu-toggle--toggled,
 .page-header__menu-toggle--nojs {
-  stroke: $basic-white;
+  @media (max-width: $tablet-max-width) {
+    stroke: $basic-white;
 
-  &:hover {
-    stroke: $basic-dark;
-  }
+    &:hover {
+      stroke: $basic-dark;
+    }
 
-  &:active,
-  &:focus {
-    opacity: 0.7;
+    &:active,
+    &:focus {
+      opacity: 0.7;
+    }
   }
 }

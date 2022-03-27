@@ -10,6 +10,8 @@
 }
 
 .page-body--lock {
-  position: fixed;
-  height: 100vh;
+  @media (max-width: $tablet-max-width) {
+    position: fixed;
+    height: 100vh;
+  }
 }
