@@ -3,6 +3,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  background-color: $basic-brown;
 
   @media (min-width: $desktop-width) {
     background-image: url("../img/main-background-desktop.jpg");
