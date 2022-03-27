@@ -211,6 +211,8 @@ const filterCloseButton = document.querySelector(`.filter__close`);
 const loginCloseButton = document.querySelector(`.login__close`);
 const modals = document.querySelectorAll(`.modal`);
 
+console.log(openLoginButton);
+
 if (filter) {
   filter.classList.remove(`filter--nojs`);
 }
