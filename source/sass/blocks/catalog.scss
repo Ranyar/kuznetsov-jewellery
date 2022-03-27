@@ -59,8 +59,16 @@
     width: 100vw;
     height: 1px;
     background-color: #f6f5f4;
-    bottom: 0;
-    left: calc(-50vw + 50%);
+    bottom: 1px;
+    left: calc(-50vw + 35%);
+
+    @media (max-width: $tablet-max-width) {
+      left: calc(-50vw + 50%);
+    }
+
+    @media (max-width: $mobile-max-width) {
+      display: none;
+    }
   }
 }
 
