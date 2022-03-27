@@ -211,6 +211,19 @@ if (accordions) {
   }
 }
 
+// ----- Перехват фокуса на аккордеон на Главной
+
+const followerItemMain = document.querySelector(`.blog-list:last-child a`);
+const interceptorItemMain = document.querySelector(`.accordion__item:first-child h3`);
+
+followerItemMain.addEventListener(`keydown`, function (event) {
+  event.preventDefault();
+  if (event.keyCode === 9) {
+    interceptorItemMain.focus();
+  }
+});
+
+
 // ----- Модальные окна
 const filter = document.querySelector(`.filter`);
 const login = document.querySelector(`.login`);
