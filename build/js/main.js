@@ -206,37 +206,46 @@ if (accordions) {
 const filter = document.querySelector(`.filter`);
 const login = document.querySelector(`.login`);
 const openFilterButton = document.querySelector(`.catalog__filter-button button`);
-const openLoginButton = document.querySelector(`.user-menu__item--login`);
+const openLoginButton = document.querySelector(`.user-menu__item--login a`);
 const filterCloseButton = document.querySelector(`.filter__close`);
 const loginCloseButton = document.querySelector(`.login__close`);
 const modals = document.querySelectorAll(`.modal`);
-
-console.log(openLoginButton);
 
 if (filter) {
   filter.classList.remove(`filter--nojs`);
 }
 
-if (modals.length !== 0) {
-  const modalFilter = document.querySelector(`.modal--filter`);
+const modalFilter = document.querySelector(`.modal--filter`);
+if (modalFilter) {
   const nameFilter = modalFilter.querySelector(`input[name="necklaces-modal"]`);
-  const modalLogin = document.querySelector(`.modal--login`);
-  const nameLogin = modalLogin.querySelector(`input[name="useremail"]`);
-
   openFilterButton.addEventListener(`click`, (evt) => {
     evt.preventDefault();
     modalFilter.classList.add(`modal--show`);
     pageBody.classList.add(`page-body--no-scroll`);
     nameFilter.focus();
   });
+  filterCloseButton.addEventListener(`click`, () => {
+    modalFilter.classList.remove(`modal--show`);
+    pageBody.classList.remove(`page-body--no-scroll`);
+  });
+}
 
+const modalLogin = document.querySelector(`.modal--login`);
+if (modalLogin) {
+  const nameLogin = modalLogin.querySelector(`input[name="useremail"]`);
   openLoginButton.addEventListener(`click`, (evt) => {
     evt.preventDefault();
     modalLogin.classList.add(`modal--show`);
     pageBody.classList.add(`page-body--no-scroll`);
     nameLogin.focus();
   });
+  loginCloseButton.addEventListener(`click`, () => {
+    modalLogin.classList.remove(`modal--show`);
+    pageBody.classList.remove(`page-body--no-scroll`);
+  });
+}
 
+if (modals.length !== 0) {
   for (let i = 0; i < modals.length; i++) {
     window.addEventListener(`keydown`, (evt) => {
       if (evt.key === `Escape` || evt.key === `Esc`) {
@@ -252,19 +261,6 @@ if (modals.length !== 0) {
         pageBody.classList.remove(`page-body--no-scroll`);
       }
     });
-
-    if (filterCloseButton) {
-      filterCloseButton.addEventListener(`click`, () => {
-        modals[i].classList.remove(`modal--show`);
-        pageBody.classList.remove(`page-body--no-scroll`);
-      });
-    }
-    if (loginCloseButton) {
-      loginCloseButton.addEventListener(`click`, () => {
-        modals[i].classList.remove(`modal--show`);
-        pageBody.classList.remove(`page-body--no-scroll`);
-      });
-    }
   }
 }
 
