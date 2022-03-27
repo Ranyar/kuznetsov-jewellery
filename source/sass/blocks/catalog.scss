@@ -1,10 +1,10 @@
 .catalog {
   padding-top: 80px;
-  padding-bottom: 41px;
+  padding-bottom: 31px;
 
   @media (max-width: $tablet-max-width) {
     padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 29px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -43,12 +43,24 @@
 }
 
 .catalog__slider {
+  position: relative;
+
   @media (max-width: $tablet-max-width) {
     padding: 0 30px;
   }
 
   @media (max-width: $mobile-max-width) {
     padding: 0;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background-color: #f6f5f4;
+    bottom: 0;
+    left: calc(-50vw + 50%);
   }
 }
 
