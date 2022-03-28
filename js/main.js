@@ -179,14 +179,15 @@ if (filterPoints.length !== 0) {
   }
 }
 
-if (accordions) {
-  const accordionItems = document.querySelectorAll(`.accordion__item`);
-  const content = document.querySelectorAll(`.accordion__content`);
+const accordionItems = document.querySelectorAll(`.accordion__item`);
+const content = document.querySelectorAll(`.accordion__content`);
 
-  for (let i = 0; i < accordions.length; i++) {
-    accordions[i].classList.remove(`accordion--nojs`);
-    accordionItems[i].classList.add(`accordion__item--opened`);
-  }
+for (let i = 0; i < accordions.length; i++) {
+  accordions[i].classList.remove(`accordion--nojs`);
+  accordionItems[i].classList.add(`accordion__item--opened`);
+}
+
+if (accordions) {
   for (let i = 0; i < accordionItems.length; i++) {
     accordionItems[i].addEventListener(`click`, () => {
       let shown = document.querySelector(`.accordion__content--show`);
@@ -214,15 +215,16 @@ if (accordions) {
 // ----- Перехват фокуса на аккордеон на Главной
 
 const followerItemMain = document.querySelector(`.blog-list:last-child a`);
-const interceptorItemMain = document.querySelector(`.accordion__item:first-child h3`);
+const interceptorItemMain = document.querySelector(`.accordion__item:first-child`);
 
-followerItemMain.addEventListener(`keydown`, function (event) {
-  event.preventDefault();
-  if (event.keyCode === 9) {
-    interceptorItemMain.focus();
-  }
-});
-
+if (accordions.length !== 0 && followerItemMain) {
+  followerItemMain.addEventListener(`keydown`, function (event) {
+    event.preventDefault();
+    if (event.keyCode === 9) {
+      interceptorItemMain.focus();
+    }
+  });
+}
 
 // ----- Модальные окна
 const filter = document.querySelector(`.filter`);
