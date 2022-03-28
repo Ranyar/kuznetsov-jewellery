@@ -46,8 +46,11 @@
 }
 
 .modal--filter {
-  padding-right: 30px;
   padding-bottom: 100px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 45px;
+  }
 
   @media (max-width: $mobile-max-width) {
     padding-right: 0;
