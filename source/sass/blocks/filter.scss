@@ -174,3 +174,7 @@
     filter: drop-shadow(0 4px 4px rgba($basic-dark, 0.25));
   }
 }
+
+.filter--nojs .filter__close {
+  display: none;
+}
