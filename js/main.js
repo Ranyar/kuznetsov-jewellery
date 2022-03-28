@@ -126,7 +126,7 @@ const pageHeaderWrapper = document.querySelector(`.page-header__wrapper`);
 const mainNav = document.querySelector(`.main-nav`);
 const mainNavList = document.querySelector(`.main-nav__list`);
 const toggleButton = document.querySelector(`.page-header__menu-toggle`);
-const cartIcon = document.querySelector(`.page-header__cart`);
+const cartIcon = document.querySelector(`.user-menu__item--cart`);
 const logoIcon = document.querySelector(`.page-header__logo`);
 const userMenu = document.querySelector(`.user-menu`);
 const search = document.querySelector(`.page-header__search`);
@@ -135,7 +135,7 @@ pageHeaderWrapper.classList.remove(`page-header__wrapper--nojs`);
 mainNav.classList.remove(`main-nav--nojs`);
 mainNavList.classList.remove(`main-nav__list--nojs`);
 toggleButton.classList.remove(`page-header__menu-toggle--nojs`);
-cartIcon.classList.remove(`page-header__cart--nojs`);
+cartIcon.classList.remove(`user-menu__item--nojs`);
 logoIcon.classList.remove(`page-header__logo--nojs`);
 userMenu.classList.remove(`user-menu--nojs`);
 search.classList.remove(`page-header__search--nojs`);
@@ -148,7 +148,7 @@ toggleButton.addEventListener(`click`, function () {
     mainNav.classList.remove(`main-nav--toggled`);
     mainNav.classList.remove(`main-nav__list--toggled`);
     toggleButton.classList.remove(`page-header__menu-toggle--toggled`);
-    cartIcon.classList.remove(`page-header__cart--toggled`);
+    cartIcon.classList.remove(`user-menu__item--toggled`);
     logoIcon.classList.remove(`page-header__logo--toggled`);
     userMenu.classList.remove(`user-menu--toggled`);
     search.classList.remove(`page-header__search--toggled`);
@@ -159,7 +159,7 @@ toggleButton.addEventListener(`click`, function () {
     mainNav.classList.add(`main-nav--toggled`);
     mainNav.classList.add(`main-nav__list--toggled`);
     toggleButton.classList.add(`page-header__menu-toggle--toggled`);
-    cartIcon.classList.add(`page-header__cart--toggled`);
+    cartIcon.classList.add(`user-menu__item--toggled`);
     logoIcon.classList.add(`page-header__logo--toggled`);
     userMenu.classList.add(`user-menu--toggled`);
     search.classList.add(`page-header__search--toggled`);
@@ -187,26 +187,37 @@ for (let i = 0; i < accordions.length; i++) {
   accordionItems[i].classList.add(`accordion__item--opened`);
 }
 
+function accordionHandler(clickedIndex) {
+  let shown = document.querySelector(`.accordion__content--show`);
+  let opened = document.querySelector(`.accordion__item--opened`);
+
+  if (shown === accordionItems[clickedIndex]) {
+    content[clickedIndex].classList.remove(`accordion__content--show`);
+    accordionItems[clickedIndex].classList.add(`accordion__item--closed`);
+    accordionItems[clickedIndex].classList.remove(`accordion__item--opened`);
+  } else {
+    content[clickedIndex].classList.add(`accordion__content--show`);
+    accordionItems[clickedIndex].classList.remove(`accordion__item--closed`);
+    accordionItems[clickedIndex].classList.add(`accordion__item--opened`);
+  }
+
+  if (shown) {
+    shown.classList.remove(`accordion__content--show`);
+    opened.classList.add(`accordion__item--closed`);
+    opened.classList.remove(`accordion__item--opened`);
+  }
+}
+
 if (accordions) {
   for (let i = 0; i < accordionItems.length; i++) {
     accordionItems[i].addEventListener(`click`, () => {
-      let shown = document.querySelector(`.accordion__content--show`);
-      let opened = document.querySelector(`.accordion__item--opened`);
+      accordionHandler(i);
+    });
 
-      if (shown === accordionItems[i]) {
-        content[i].classList.remove(`accordion__content--show`);
-        accordionItems[i].classList.add(`accordion__item--closed`);
-        accordionItems[i].classList.remove(`accordion__item--opened`);
-      } else {
-        content[i].classList.add(`accordion__content--show`);
-        accordionItems[i].classList.remove(`accordion__item--closed`);
-        accordionItems[i].classList.add(`accordion__item--opened`);
-      }
-
-      if (shown) {
-        shown.classList.remove(`accordion__content--show`);
-        opened.classList.add(`accordion__item--closed`);
-        opened.classList.remove(`accordion__item--opened`);
+    accordionItems[i].addEventListener(`keydown`, (evt) => {
+      if (evt.keyCode === 13) {
+        evt.preventDefault();
+        accordionHandler(i);
       }
     });
   }
@@ -230,7 +241,8 @@ if (accordions.length !== 0 && followerItemMain) {
 const filter = document.querySelector(`.filter`);
 const login = document.querySelector(`.login`);
 const openFilterButton = document.querySelector(`.catalog__filter-button button`);
-const openLoginButton = document.querySelector(`.user-menu__item--login a`);
+const headerLoginButton = document.querySelector(`.user-menu__item--login a`);
+const mainNavLoginButton = document.querySelector(`.main-nav__item--login a`)
 const filterCloseButton = document.querySelector(`.filter__close`);
 const loginCloseButton = document.querySelector(`.login__close`);
 const modals = document.querySelectorAll(`.modal`);
@@ -239,17 +251,24 @@ if (filter) {
   filter.classList.remove(`filter--nojs`);
 }
 
-const modalFilter = document.querySelector(`.modal--filter`);
-if (modalFilter) {
-  const nameFilter = modalFilter.querySelector(`input[name="necklaces-modal"]`);
+const filterModal = document.querySelector(`.filter--modal`);
+const filterWrapper = document.querySelector(`.filter__wrapper`);
+if (filterModal) {
+  const nameFilter = filterModal.querySelector(`input[name="necklaces"]`);
   openFilterButton.addEventListener(`click`, (evt) => {
     evt.preventDefault();
-    modalFilter.classList.add(`modal--show`);
+    filterModal.classList.add(`modal`);
+    filterModal.classList.add(`modal--show`);
+    filterWrapper.classList.add(`modal__wrapper`);
+    filterWrapper.classList.add(`modal__wrapper--filter`);
     pageBody.classList.add(`page-body--no-scroll`);
     nameFilter.focus();
   });
   filterCloseButton.addEventListener(`click`, () => {
-    modalFilter.classList.remove(`modal--show`);
+    filterModal.classList.remove(`modal`);
+    filterModal.classList.remove(`modal--show`);
+    filterWrapper.classList.remove(`modal__wrapper`);
+    filterWrapper.classList.remove(`modal__wrapper--filter`);
     pageBody.classList.remove(`page-body--no-scroll`);
   });
 }
@@ -257,7 +276,13 @@ if (modalFilter) {
 const modalLogin = document.querySelector(`.modal--login`);
 if (modalLogin) {
   const nameLogin = modalLogin.querySelector(`input[name="useremail"]`);
-  openLoginButton.addEventListener(`click`, (evt) => {
+  headerLoginButton.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    modalLogin.classList.add(`modal--show`);
+    pageBody.classList.add(`page-body--no-scroll`);
+    nameLogin.focus();
+  });
+  mainNavLoginButton.addEventListener(`click`, (evt) => {
     evt.preventDefault();
     modalLogin.classList.add(`modal--show`);
     pageBody.classList.add(`page-body--no-scroll`);
@@ -276,6 +301,10 @@ if (modals.length !== 0) {
         if (modals[i].classList.contains(`modal--show`)) {
           modals[i].classList.remove(`modal--show`);
         } pageBody.classList.remove(`page-body--no-scroll`);
+        if (filterModal) {
+          filterModal.classList.remove(`modal--show`);
+          pageBody.classList.remove(`page-body--no-scroll`);
+        }
       }
     });
 
@@ -285,12 +314,20 @@ if (modals.length !== 0) {
         pageBody.classList.remove(`page-body--no-scroll`);
       }
     });
+    if (filterModal) {
+      filterModal.addEventListener(`click`, (evt) => {
+        if (filterModal && evt.target.classList.contains(`modal--show`) || evt.target.classList.contains(`modal__wrapper`)) {
+          filterModal.classList.remove(`modal--show`);
+          pageBody.classList.remove(`page-body--no-scroll`);
+        }
+      });
+    }
   }
 }
 
 // ----- Перехват фокуса в модальном окне фильтра
 
-const firstElementFilter = document.querySelector(`#necklaces-modal`);
+const firstElementFilter = document.querySelector(`#necklaces`);
 const lastElementFilter = document.querySelector(`.filter__close`);
 
 if (lastElementFilter) {
@@ -298,6 +335,31 @@ if (lastElementFilter) {
     event.preventDefault();
     if (event.keyCode === 9) {
       firstElementFilter.focus();
+    }
+  });
+}
+
+// ----- Перехват фокуса фильтра в каталоге
+
+const followerItemCatalog = document.querySelector(`.main-nav__item:last-child a`);
+const interceptorItemFilter = document.querySelector(`input[name="necklaces"]`);
+const followerItemFilter = document.querySelector(`.filter__btn:last-child`);
+const interceptorItemCatalog = document.querySelector(`.slider-item--catalog:first-child`);
+
+if (followerItemCatalog) {
+  followerItemCatalog.addEventListener(`keydown`, function (event) {
+    event.preventDefault();
+    if (event.keyCode === 9) {
+      interceptorItemFilter.focus();
+    }
+  });
+}
+
+if (followerItemFilter) {
+  followerItemFilter.addEventListener(`keydown`, function (event) {
+    event.preventDefault();
+    if (event.keyCode === 9) {
+      interceptorItemCatalog.focus();
     }
   });
 }
