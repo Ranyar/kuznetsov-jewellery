@@ -57,18 +57,16 @@
     grid-row-start: 1;
     grid-row-end: 2;
   }
-
-  & svg {
-    fill: $basic-brown;
-
-    @media (max-width: $mobile-max-width) {
-      width: 52px;
-      height: 52px;
-    }
-  }
 }
 
 .page-header__logo svg {
+  fill: $basic-brown;
+
+  @media (max-width: $mobile-max-width) {
+    width: 52px;
+    height: 52px;
+  }
+
   &:hover,
   &:focus {
     fill: $basic-dark;
