@@ -27,7 +27,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 10px;
+  padding-left: 45px;
   position: relative;
 
   &::before {
@@ -115,6 +115,10 @@
 
 .main-nav__item--login {
   margin-top: 24px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-top: 13px;
+  }
 }
 
 .main-nav__item--login a {
