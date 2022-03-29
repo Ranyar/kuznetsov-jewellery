@@ -226,3 +226,14 @@
 .page-header__search--toggled input:-ms-input-placeholder {
   color: transparent
 }
+
+.page-header__logo--main svg {
+  &:hover,
+  &:focus {
+    fill: $basic-brown;
+  }
+
+  &:active {
+    opacity: 0;
+  }
+}
