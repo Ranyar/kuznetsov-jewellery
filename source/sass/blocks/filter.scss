@@ -178,3 +178,8 @@
 .filter--nojs .filter__close {
   display: none;
 }
+
+.filter--modal .filter__field::before {
+  top: 40px;
+  right: 38px;
+}
