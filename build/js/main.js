@@ -346,7 +346,7 @@ const interceptorItemFilter = document.querySelector(`input[name="necklaces"]`);
 const followerItemFilter = document.querySelector(`.filter__btn:last-child`);
 const interceptorItemCatalog = document.querySelector(`.slider-item--catalog:first-child`);
 
-if (followerItemCatalog) {
+if (followerItemCatalog && filter) {
   followerItemCatalog.addEventListener(`keydown`, function (event) {
     event.preventDefault();
     if (event.keyCode === 9) {
