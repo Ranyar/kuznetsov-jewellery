@@ -210,3 +210,19 @@
     }
   }
 }
+
+.page-header__search--toggled input::-webkit-input-placeholder {
+  color: transparent
+}
+
+.page-header__search--toggled input::-moz-placeholder {
+  color: transparent
+}
+
+.page-header__search--toggled input:-moz-placeholder {
+  color: transparent
+}
+
+.page-header__search--toggled input:-ms-input-placeholder {
+  color: transparent
+}
