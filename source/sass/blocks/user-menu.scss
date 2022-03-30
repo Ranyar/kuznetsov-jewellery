@@ -5,6 +5,8 @@
   margin: 0;
   font-weight: 500;
   line-height: 21px;
+  max-width: 328px;
+  flex-wrap: wrap;
 
   & li {
     margin-right: 35px;
@@ -15,11 +17,13 @@
   }
 
   @media (max-width: $tablet-max-width) {
+    max-width: 226px;
     font-size: 18px;
     line-height: 130%;
   }
 
   @media (max-width: $mobile-max-width) {
+    max-width: 97px;
     padding-left: 1px;
   }
 }
@@ -102,5 +106,11 @@
 .user-menu__item span {
   @media (max-width: $tablet-max-width) {
     display: none;
+  }
+}
+
+.user-menu__item.user-menu__item--cart {
+  @media (max-width: $tablet-max-width) {
+    margin-right: 0;
   }
 }
