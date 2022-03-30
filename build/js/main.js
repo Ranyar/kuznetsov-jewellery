@@ -230,8 +230,9 @@ const interceptorItemMain = document.querySelector(`.accordion__item:first-child
 
 if (accordions.length !== 0 && followerItemMain) {
   followerItemMain.addEventListener(`keydown`, function (event) {
-    event.preventDefault();
-    if (event.keyCode === 9) {
+
+    if (event.keyCode === 9 && !event.shiftKey) {
+      event.preventDefault();
       interceptorItemMain.focus();
     }
   });
