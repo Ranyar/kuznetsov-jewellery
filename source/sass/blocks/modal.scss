@@ -16,6 +16,7 @@
 
 .modal--show {
   display: flex;
+  display: -webkit-box;
 }
 
 .modal__close {
